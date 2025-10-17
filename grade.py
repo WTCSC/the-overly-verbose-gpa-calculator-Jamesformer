@@ -26,8 +26,17 @@ if choice == "1":
     first_classes_count = len(grade_list[:3])
     first_classes_total = sum(grade_list[:3])
     first_classes_gpa = first_classes_total / first_classes_count
-    print("according to the calculations you should have", first_classes_gpa)
+    print("according to the calculations you should have", round(first_classes_gpa, 2))
     if first_classes_gpa > overall_gpa:
         print("congratulations it seems that the gpa for the first half of your classes are higher than your overall gpa")
     if first_classes_gpa < overall_gpa:
         print("it seems like your first classes gpa is lower than your overall gpa. This may mean that these classes are the ones you need to improve in the most for a higher gpa")
+if choice == "2":
+    second_classes_count = len(grade_list[3:])
+    second_classes_total = sum(grade_list[3:])
+    second_classes_gpa = second_classes_total / second_classes_count
+    print("according to the calculations you should have a", round(second_classes_gpa, 2))
+    if second_classes_gpa > overall_gpa:
+        print("it seems like your second classes gpa is higher than your overall which means that you are doing the best in second half of your classes and that your first half could use some improvement")
+    if second_classes_gpa < overall_gpa:
+        print("it looks like your second half of your classes have a lower gpa than your overall gpa which means you need to improve on these classes to improve your gpa")
